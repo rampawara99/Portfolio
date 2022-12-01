@@ -1,0 +1,653 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Reem+Kufi+Ink&display=swap');
+
+body {
+    background:linear-gradient(rgb(29 29 29 / 96%), #000000);
+    position: relative;
+}
+
+/* loader style ---------------- */
+.loader-container {
+    position: fixed;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    z-index: 1111111111111;
+}
+
+.loader {
+    width: 50px;
+    height: 34px;
+    border-bottom: 16px solid #000000;
+    border-radius: 100%;
+    animation-name: load;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    box-shadow: 13px 1px 0px 14px #2de5dae8;
+    margin-bottom: 96px;
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ------- Home styles ------------ */
+section {
+    /* background: rgba(0, 0, 0, 0.795); */
+    margin-top: -10px;
+    padding: 0px 100px;
+}
+
+.home-container {
+    display: flex;
+    width: 60%;
+    height: 90vh;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.home-part-1 .short-intro div:nth-child(1) span,
+.home-part-1 .short-intro div:nth-child(2) span {
+    letter-spacing: 2px;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+.home-part-1 .short-intro div:nth-child(1) span:nth-child(1),
+.home-part-1 .short-intro div:nth-child(2) span:nth-child(1) {
+    font-size: 1.8rem;
+}
+
+.home-part-1 .short-intro div:nth-child(1) span:nth-child(2),
+.home-part-1 .short-intro div:nth-child(2) span:nth-child(2) {
+    margin-left: 10px;
+    color: red;
+    font-size: 2.3rem;
+    font-weight: bolder;
+}
+
+.home-part-1 .short-intro div:nth-child(1) span:nth-child(3),
+.home-part-1 .short-intro div:nth-child(2) span:nth-child(3) {
+    font-size: 2.3rem;
+}
+
+.home-part-1 .profile-btn {
+    margin-top: 25px;
+}
+
+.home-part-1 .profile-btn a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 9px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: .5s all ease-in-out;
+    background: red;
+    border-radius: 4px;
+    color: white;
+}
+
+.home-part-1 .profile-btn a:hover {
+    transform: translateY(5px);
+}
+
+.home-part-1 .profile-btn a:nth-child(1):hover {
+    color: black;
+}
+
+.home-part-1 .profile-btn a:nth-child(2) {
+    color: black;
+    background: white;
+}
+
+.home-part-1 .profile-btn a:nth-child(2):hover {
+    color: white;
+    background: red;
+}
+
+.profile-pic-controler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 214px;
+    height: 224px;
+    border-radius: 50%;
+    box-shadow: -2px 3px 0 0 orangered;
+    transition: 0.8s ease;
+}
+
+.profile-pic-controler:hover {
+    box-shadow: 2px 3px 0 0 orangered;
+}
+
+.profile-pic-controler div {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    box-shadow: 2px 3px 0 0 orange;
+}
+
+.profile-pic-controler div:hover {
+    width: 210px;
+    height: 220px;
+    box-shadow: -2px -7px 0 0 orange;
+}
+
+.profile-pic-controler div img {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 20px;
+}
+
+@media screen and (max-width:1200px) {
+    .home-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:770px) {
+    .home-part-2 {
+        display: none;
+    }
+
+    .home-container {
+        align-items: center;
+    }
+
+    .home-part-1 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .home-part-1 .short-intro div:nth-child(1) span:nth-child(1),
+    .home-part-1 .short-intro div:nth-child(2) span:nth-child(1) {
+        font-size: 1.2rem;
+    }
+
+    .home-part-1 .short-intro div:nth-child(1) span:nth-child(2),
+    .home-part-1 .short-intro div:nth-child(2) span:nth-child(2) {
+        font-size: 1.2rem;
+    }
+
+    .home-part-1 .short-intro div:nth-child(1) span:nth-child(3),
+    .home-part-1 .short-intro div:nth-child(2) span:nth-child(3) {
+        font-size: 1.2rem;
+    }
+}
+
+/* ------- End Home styles ------------ */
+
+/* ------- About container stayle ------- */
+.about-controller {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.abouts-img {
+    width: 30%;
+}
+
+.abouts-detail {
+    width: 30%;
+}
+
+.abouts-img div:nth-child(1) {
+    width: 400px;
+    height: 500px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    position: relative;
+}
+
+.abouts-img div img {
+    display: inline-block;
+    width: 100%;
+    border-bottom-left-radius: 53%;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 53%;
+    border-bottom-right-radius: 100%;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 104%;
+    box-shadow: 0px 9px #156876;
+    transition: 1s ease-in-out;
+}
+
+.abouts-detail {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.abouts-detail .details {
+    display: flex;
+    margin-top: 30px;
+}
+
+.abouts-detail .details h4 {
+    margin-right: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.abouts-detail .details h4 span {
+    position: absolute;
+    left: 0%;
+    bottom: -57%;
+    width: 0%;
+    height: 7px;
+    background: #00daff;
+    transition: .5s ease-in-out;
+}
+
+/* .abouts-detail .details h4:hover span {
+    width: 70%;
+} */
+
+/* skills-- */
+.skills {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+    margin-left: 21px;
+}
+
+.backend {
+    margin-left: 93px;
+}
+
+.skills .backend h4::after,
+.skills .frontend h4::after,
+.education div h4::after,
+.experience div h4::after {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #ff0057;
+}
+
+.skills .backend ul,
+.skills .frontend ul {
+    line-height: 36px;
+    margin-top: 7px;
+}
+
+.education div {
+    text-align: justify;
+    margin-top: 15px;
+}
+
+.education div p span:nth-child(1) {
+    color: #ff008c;
+    font-size: initial;
+}
+
+.education div p span:nth-child(2) {
+    font-size: 16px;
+}
+
+/* experience--- */
+.experience,
+.education {
+    margin-top: 30px;
+    margin-left: 21px;
+    display: none;
+}
+
+.experience div p {
+    font-size: 16px;
+}
+
+.experience div h4,
+.education div h4,
+.skills .backend h4,
+.skills .frontend h4 {
+    position: relative;
+    color: #00daff;
+}
+
+@media screen and (max-width:1000px) {
+
+    .about-controller {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .abouts-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .abouts-detail {
+        width: 100%;
+        /* width: inherit; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0px;
+    }
+}
+
+/* @media screen and (max-width:500px) {
+    .abouts-img div:nth-child(1) {
+        width: 250px;
+        height: 260px;
+    }
+
+    .abouts-detail .details {
+        flex-direction: column;
+        line-height: 45px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .abouts-detail .details h4 span {
+        display: none;
+    }
+
+    .abouts-detail .details h4 {
+        margin-right: initial;
+    }
+
+    .abouts-detail h1 {
+        text-align: center;
+    }
+
+    .abouts-detail {
+        margin-left: initial;
+    }
+
+    .skills {
+        justify-content: space-between;
+    }
+} */
+
+@media screen and (max-width:350px) {
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .backend {
+        margin-left: initial;
+        margin-top: 16px;
+    }
+}
+
+/* ------- End About container stayle ------- */
+
+/* ------- Start Project container style ------ */
+.project-container {
+    margin-bottom: 100px;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.project-btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.6s all ease-in-out;
+}
+
+.project-btn:hover {
+    background: #ff004f;
+}
+
+.project-controller {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0px;
+}
+
+.project-1 {
+    width: 400px;
+    height: 250px;
+    background-color: red;
+    border-radius: 10px;
+    margin: 7px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-1 div {
+    width: 400px;
+    height: 250px;
+    transition: .5s all ease-in-out;
+}
+
+.project-1 div img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.project-1 .hover-effect {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    transition: .5s all ease-in-out;
+}
+
+.project-1:hover.project-1 div:nth-child(1) {
+    transform: scale(1.2, 1.5);
+}
+
+.project-1:hover .hover-effect {
+    height: 100%;
+}
+
+.hover-effect p:nth-child(1) {
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 14px;
+}
+
+.hover-effect a {
+    text-decoration: none;
+}
+
+.hover-effect a i {
+    font-size: 64px;
+}
+
+/* ------- End Project container styles ------ */
+
+/* Start Contact container styles ----------- */
+.contact-control {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.btn {
+    padding: 10px 36px;
+    font-size: 21px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    background: #ff004f;
+}
+
+.download-btn {
+    display: inline-block;
+    margin: 31px 0px;
+}
+
+.submit-btn {
+    margin: 9px 0px;
+    display: inline-block;
+    color: #d8d8d8;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+
+.contact-left p {
+    margin: 30px;
+    margin-left: 0;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+form .btn2 {
+    display: inline-block;
+    background: #ff004f;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+@media screen and (max-width:600px) {
+    /* about---------- */
+    .abouts-img div:nth-child(1) {
+        width: 250px;
+        height: 260px;
+    }
+
+    .abouts-detail .details {
+        flex-direction: column;
+        line-height: 45px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .abouts-detail .details h4 span {
+        display: none;
+    }
+
+    .abouts-detail .details h4 {
+        margin-right: initial;
+    }
+
+    .abouts-detail h1 {
+        text-align: center;
+    }
+
+    .abouts-detail {
+        margin-left: initial;
+    }
+
+    .skills {
+        justify-content: space-between;
+    }
+    /* contact-------- */
+    .contact-control {
+        flex-direction: column;
+    }
+
+    .contact-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-right {
+        width: 100%;
+    }
+    .title {
+        text-align: center;
+    }
+}
+
+/* End Contact container styles ------- */
+
+/* start footer container styles ------- */
+.footer {
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+    background: #262626;
+}
+
+/* end footer container styles ------- */
+
+@media screen and (max-width:1156px) {
+    section {
+        padding: 0px 20px;
+    }
+}
